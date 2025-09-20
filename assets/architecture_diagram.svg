@@ -1,0 +1,138 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1565C0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E65100;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#1e1e2f"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" fill="white" font-size="24" font-weight="bold">AI Snake Game Architecture</text>
+  
+  <!-- Game Environment -->
+  <rect x="50" y="80" width="180" height="120" rx="10" fill="url(#grad1)" stroke="#4CAF50" stroke-width="2"/>
+  <text x="140" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Game Environment</text>
+  <text x="140" y="125" text-anchor="middle" fill="white" font-size="12">snake_env.py</text>
+  <text x="60" y="145" fill="white" font-size="10">• Snake movement</text>
+  <text x="60" y="160" fill="white" font-size="10">• Collision detection</text>
+  <text x="60" y="175" fill="white" font-size="10">• State representation</text>
+  <text x="60" y="190" fill="white" font-size="10">• Reward calculation</text>
+  
+  <!-- DQN Agent -->
+  <rect x="310" y="80" width="180" height="120" rx="10" fill="url(#grad2)" stroke="#2196F3" stroke-width="2"/>
+  <text x="400" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">DQN Agent</text>
+  <text x="400" y="125" text-anchor="middle" fill="white" font-size="12">dqn_agent.py</text>
+  <text x="320" y="145" fill="white" font-size="10">• Neural Network</text>
+  <text x="320" y="160" fill="white" font-size="10">• Experience Replay</text>
+  <text x="320" y="175" fill="white" font-size="10">• Epsilon-Greedy</text>
+  <text x="320" y="190" fill="white" font-size="10">• Training Loop</text>
+  
+  <!-- AI Player -->
+  <rect x="570" y="80" width="180" height="120" rx="10" fill="url(#grad3)" stroke="#FF9800" stroke-width="2"/>
+  <text x="660" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">AI Player</text>
+  <text x="660" y="125" text-anchor="middle" fill="white" font-size="12">fast_ai_player.py</text>
+  <text x="580" y="145" fill="white" font-size="10">• Model Loading</text>
+  <text x="580" y="160" fill="white" font-size="10">• Action Selection</text>
+  <text x="580" y="175" fill="white" font-size="10">• Inference</text>
+  <text x="580" y="190" fill="white" font-size="10">• Game Interface</text>
+  
+  <!-- Neural Network Detail -->
+  <rect x="250" y="250" width="300" height="200" rx="10" fill="#2c2c3e" stroke="#666" stroke-width="2"/>
+  <text x="400" y="275" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Neural Network Architecture</text>
+  
+  <!-- Input Layer -->
+  <rect x="270" y="290" width="80" height="40" rx="5" fill="#4CAF50" stroke="#2E7D32" stroke-width="1"/>
+  <text x="310" y="310" text-anchor="middle" fill="white" font-size="10">Input Layer</text>
+  <text x="310" y="322" text-anchor="middle" fill="white" font-size="8">(12 neurons)</text>
+  
+  <!-- Hidden Layer 1 -->
+  <rect x="370" y="290" width="80" height="40" rx="5" fill="#2196F3" stroke="#1565C0" stroke-width="1"/>
+  <text x="410" y="310" text-anchor="middle" fill="white" font-size="10">Hidden 1</text>
+  <text x="410" y="322" text-anchor="middle" fill="white" font-size="8">(128 neurons)</text>
+  
+  <!-- Hidden Layer 2 -->
+  <rect x="470" y="290" width="80" height="40" rx="5" fill="#2196F3" stroke="#1565C0" stroke-width="1"/>
+  <text x="510" y="310" text-anchor="middle" fill="white" font-size="10">Hidden 2</text>
+  <text x="510" y="322" text-anchor="middle" fill="white" font-size="8">(128 neurons)</text>
+  
+  <!-- Output Layer -->
+  <rect x="370" y="350" width="80" height="40" rx="5" fill="#FF9800" stroke="#E65100" stroke-width="1"/>
+  <text x="410" y="370" text-anchor="middle" fill="white" font-size="10">Output Layer</text>
+  <text x="410" y="382" text-anchor="middle" fill="white" font-size="8">(3 Q-values)</text>
+  
+  <!-- Arrows between layers -->
+  <path d="M 350 310 L 365 310" stroke="white" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 450 310 L 465 310" stroke="white" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 450 330 L 430 350" stroke="white" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Web Interface -->
+  <rect x="50" y="480" width="180" height="80" rx="10" fill="#9C27B0" stroke="#7B1FA2" stroke-width="2"/>
+  <text x="140" y="505" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Web Interface</text>
+  <text x="140" y="525" text-anchor="middle" fill="white" font-size="12">Flask App</text>
+  <text x="60" y="545" fill="white" font-size="10">• Real-time visualization</text>
+  <text x="60" y="555" fill="white" font-size="10">• Model selection</text>
+  
+  <!-- Training Data -->
+  <rect x="310" y="480" width="180" height="80" rx="10" fill="#795548" stroke="#5D4037" stroke-width="2"/>
+  <text x="400" y="505" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Training Data</text>
+  <text x="400" y="525" text-anchor="middle" fill="white" font-size="12">Experience Replay</text>
+  <text x="320" y="545" fill="white" font-size="10">• State transitions</text>
+  <text x="320" y="555" fill="white" font-size="10">• Reward history</text>
+  
+  <!-- Model Files -->
+  <rect x="570" y="480" width="180" height="80" rx="10" fill="#607D8B" stroke="#455A64" stroke-width="2"/>
+  <text x="660" y="505" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Model Files</text>
+  <text x="660" y="525" text-anchor="middle" fill="white" font-size="12">*.pth files</text>
+  <text x="580" y="545" fill="white" font-size="10">• Trained weights</text>
+  <text x="580" y="555" fill="white" font-size="10">• Checkpoints</text>
+  
+  <!-- Data Flow Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="white"/>
+    </marker>
+  </defs>
+  
+  <!-- Environment to Agent -->
+  <path d="M 230 140 L 305 140" stroke="white" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="267" y="135" text-anchor="middle" fill="white" font-size="10">State</text>
+  
+  <!-- Agent to Player -->
+  <path d="M 490 140 L 565 140" stroke="white" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="527" y="135" text-anchor="middle" fill="white" font-size="10">Action</text>
+  
+  <!-- Player to Environment -->
+  <path d="M 570 160 Q 400 220 230 160" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="400" y="210" text-anchor="middle" fill="white" font-size="10">Game Control</text>
+  
+  <!-- Agent to Training Data -->
+  <path d="M 400 200 L 400 475" stroke="white" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="415" y="340" fill="white" font-size="10">Experience</text>
+  
+  <!-- Training Data to Agent -->
+  <path d="M 380 480 L 380 205" stroke="white" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="365" y="340" fill="white" font-size="10">Batch</text>
+  
+  <!-- Agent to Model Files -->
+  <path d="M 490 180 Q 530 350 570 500" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="540" y="340" fill="white" font-size="10">Save</text>
+  
+  <!-- Model Files to Player -->
+  <path d="M 660 480 L 660 205" stroke="white" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="675" y="340" fill="white" font-size="10">Load</text>
+  
+  <!-- Web Interface to Player -->
+  <path d="M 230 520 Q 400 400 570 160" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="350" y="380" fill="white" font-size="10">Control</text>
+</svg>

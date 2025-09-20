@@ -1,0 +1,133 @@
+<svg width="600" height="700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="snakeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="foodGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FF5722;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D32F2F;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="headGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8BC34A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="700" fill="#1e1e2f"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" fill="white" font-size="24" font-weight="bold">🐍 AI Snake Game Demo</text>
+  <text x="300" y="50" text-anchor="middle" fill="#ccc" font-size="14">Real-time AI Gameplay Visualization</text>
+  
+  <!-- Game Board Background -->
+  <rect x="100" y="80" width="400" height="400" fill="#2c2c3e" stroke="#4CAF50" stroke-width="3" rx="10"/>
+  
+  <!-- Grid Lines -->
+  <g stroke="#444" stroke-width="0.5">
+    <!-- Vertical lines -->
+    <line x1="140" y1="80" x2="140" y2="480"/>
+    <line x1="180" y1="80" x2="180" y2="480"/>
+    <line x1="220" y1="80" x2="220" y2="480"/>
+    <line x1="260" y1="80" x2="260" y2="480"/>
+    <line x1="300" y1="80" x2="300" y2="480"/>
+    <line x1="340" y1="80" x2="340" y2="480"/>
+    <line x1="380" y1="80" x2="380" y2="480"/>
+    <line x1="420" y1="80" x2="420" y2="480"/>
+    <line x1="460" y1="80" x2="460" y2="480"/>
+    
+    <!-- Horizontal lines -->
+    <line x1="100" y1="120" x2="500" y2="120"/>
+    <line x1="100" y1="160" x2="500" y2="160"/>
+    <line x1="100" y1="200" x2="500" y2="200"/>
+    <line x1="100" y1="240" x2="500" y2="240"/>
+    <line x1="100" y1="280" x2="500" y2="280"/>
+    <line x1="100" y1="320" x2="500" y2="320"/>
+    <line x1="100" y1="360" x2="500" y2="360"/>
+    <line x1="100" y1="400" x2="500" y2="400"/>
+    <line x1="100" y1="440" x2="500" y2="440"/>
+  </g>
+  
+  <!-- Snake Body -->
+  <rect x="220" y="240" width="35" height="35" fill="url(#snakeGrad)" rx="5"/>
+  <rect x="260" y="240" width="35" height="35" fill="url(#snakeGrad)" rx="5"/>
+  <rect x="300" y="240" width="35" height="35" fill="url(#snakeGrad)" rx="5"/>
+  <rect x="340" y="240" width="35" height="35" fill="url(#snakeGrad)" rx="5"/>
+  <rect x="380" y="240" width="35" height="35" fill="url(#snakeGrad)" rx="5"/>
+  <rect x="380" y="200" width="35" height="35" fill="url(#snakeGrad)" rx="5"/>
+  <rect x="380" y="160" width="35" height="35" fill="url(#snakeGrad)" rx="5"/>
+  
+  <!-- Snake Head -->
+  <rect x="420" y="160" width="35" height="35" fill="url(#headGrad)" rx="8"/>
+  <!-- Eyes -->
+  <circle cx="430" cy="170" r="3" fill="white"/>
+  <circle cx="445" cy="170" r="3" fill="white"/>
+  <circle cx="430" cy="170" r="1.5" fill="black"/>
+  <circle cx="445" cy="170" r="1.5" fill="black"/>
+  
+  <!-- Food -->
+  <circle cx="177.5" cy="317.5" r="15" fill="url(#foodGrad)"/>
+  <rect x="172" y="312" width="11" height="11" fill="#4CAF50" rx="2"/>
+  
+  <!-- Movement Arrow -->
+  <path d="M 455 177.5 L 480 177.5 L 475 172.5 M 480 177.5 L 475 182.5" 
+        stroke="#FFD700" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="490" y="182" fill="#FFD700" font-size="12" font-weight="bold">Next Move: RIGHT</text>
+  
+  <!-- Game Stats -->
+  <rect x="50" y="500" width="500" height="120" fill="#2c2c3e" stroke="#666" stroke-width="2" rx="10"/>
+  <text x="300" y="525" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Game Statistics</text>
+  
+  <g fill="white" font-size="14">
+    <text x="70" y="550">🎯 Current Score: 7</text>
+    <text x="70" y="570">🏆 High Score: 26</text>
+    <text x="70" y="590">🎮 Game State: Playing</text>
+    <text x="70" y="610">🤖 AI Model: best_dqn_snake.pth</text>
+    
+    <text x="320" y="550">📊 Episode: 1,247</text>
+    <text x="320" y="570">⚡ Speed: Normal</text>
+    <text x="320" y="590">🧠 Action: Straight</text>
+    <text x="320" y="610">🎲 Epsilon: 0.01</text>
+  </g>
+  
+  <!-- AI Decision Process -->
+  <rect x="50" y="640" width="500" height="50" fill="#3f3f5f" stroke="#666" stroke-width="2" rx="10"/>
+  <text x="300" y="660" text-anchor="middle" fill="white" font-size="14" font-weight="bold">AI Decision Process</text>
+  <text x="70" y="680">State: [0,0,0,1, 1,0,0,0, 0,1,0,0] → Q-values: [0.2, 0.8, 0.1] → Action: Turn Right</text>
+  
+  <!-- Legend -->
+  <rect x="520" y="80" width="70" height="150" fill="#2c2c3e" stroke="#666" stroke-width="1" rx="5"/>
+  <text x="555" y="100" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Legend</text>
+  
+  <rect x="530" y="110" width="15" height="15" fill="url(#headGrad)" rx="3"/>
+  <text x="550" y="122" fill="white" font-size="10">Head</text>
+  
+  <rect x="530" y="130" width="15" height="15" fill="url(#snakeGrad)" rx="2"/>
+  <text x="550" y="142" fill="white" font-size="10">Body</text>
+  
+  <circle cx="537.5" cy="157.5" r="7" fill="url(#foodGrad)"/>
+  <text x="550" y="162" fill="white" font-size="10">Food</text>
+  
+  <rect x="530" y="170" width="15" height="15" fill="#444" rx="2"/>
+  <text x="550" y="182" fill="white" font-size="10">Empty</text>
+  
+  <path d="M 530 195 L 545 195 L 540 190 M 545 195 L 540 200" 
+        stroke="#FFD700" stroke-width="2" fill="none"/>
+  <text x="550" y="200" fill="white" font-size="10">Direction</text>
+  
+  <!-- Performance Indicators -->
+  <g transform="translate(100, 520)">
+    <!-- Score Progress Bar -->
+    <rect x="0" y="0" width="200" height="10" fill="#444" rx="5"/>
+    <rect x="0" y="0" width="54" height="10" fill="#4CAF50" rx="5"/>
+    <text x="210" y="8" fill="white" font-size="10">Score Progress (7/26)</text>
+  </g>
+  
+  <!-- AI Confidence Meter -->
+  <g transform="translate(350, 520)">
+    <rect x="0" y="0" width="100" height="10" fill="#444" rx="5"/>
+    <rect x="0" y="0" width="95" height="10" fill="#2196F3" rx="5"/>
+    <text x="110" y="8" fill="white" font-size="10">AI Confidence: 95%</text>
+  </g>
+</svg>
